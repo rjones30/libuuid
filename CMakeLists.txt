@@ -87,7 +87,7 @@ add_custom_command(
     OUTPUT ${PUBLIC_INCLUDE_DIR}/uuid/uuid.h
     DEPENDS ${ORIG_SRC}/libuuid/src/uuid.h
     COMMAND ${CMAKE_COMMAND} -E make_directory ${PUBLIC_INCLUDE_DIR}/uuid
-    COMMAND ${CMAKE_COMMAND} -E copy_if_different ${ORIG_SRC}/libuuid/src/uuid.h ${PUBLIC_INCLUDE_DIR}/uuid
+    COMMAND ${CMAKE_COMMAND} -E copy ${ORIG_SRC}/libuuid/src/uuid.h ${PUBLIC_INCLUDE_DIR}/uuid
 )
 
 set_source_files_properties(${PUBLIC_INCLUDE_DIR}/uuid/uuid.h PROPERTIES GENERATED ON)
